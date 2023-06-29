@@ -11,7 +11,8 @@ export const Nav = () => {
         </Link>
       </div>
       <div>
-        <NavLink to="/">Smartphone</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/smartphones">Smartphones</NavLink>
         <NavLink to="/laptops">Laptops</NavLink>
       </div>
     </NavStyle>

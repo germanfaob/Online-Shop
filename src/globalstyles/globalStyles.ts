@@ -25,6 +25,7 @@ body{
     flex-direction: column;
     width: 100vw;
     height: 100%;
+    padding-bottom: 2rem;
 }
 
 a{

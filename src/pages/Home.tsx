@@ -1,24 +1,22 @@
-import { CardPhone } from "../components/CardPhone";
+import { CardHome } from "../components/CardHome";
 import { useFetch } from "../hooks/useFetch";
 import { Product } from "../Types/ProductType";
 
-export const Smartphones = () => {
-  const { data } = useFetch(
-    "https://dummyjson.com/products/category/smartphones"
-  );
+export const Home = () => {
+  const { data } = useFetch("https://dummyjson.com/products");
   const { products }: { products?: Product[] } = data || {};
 
   return (
     <section>
       <div>
-        <h1>Smartphones</h1>
+        <h1>Todos los productos</h1>
       </div>
       <div>
         {products &&
           products.map((product) => (
-            <CardPhone
+            <CardHome
               key={product.id}
-              image={product.images[1]}
+              image={product.images[0]}
               title={product.title}
               price={product.price}
               productId={product.id}
