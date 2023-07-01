@@ -14,7 +14,6 @@ export const Layout = () => {
 };
 
 const Container = styled.section`
-  padding: 0.93rem;
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -25,7 +25,7 @@ const NavStyle = styled.nav`
   width: 100%;
   height: 90px;
   background-color: ${(props) => props.theme.colors.bgNav};
-  & div:first-child {
+  & div:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,12 +33,16 @@ const NavStyle = styled.nav`
     & a {
       color: inherit;
     }
+    & a:hover {
+      color: ${(props) => props.theme.colors.bg};
+      transition: 0.3s;
+    }
     & svg {
       font-size: 3rem;
       color: ${(props) => props.theme.colors.text};
     }
   }
-  & div:last-child {
+  & div:nth-child(2) {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -48,6 +52,13 @@ const NavStyle = styled.nav`
     & a {
       color: ${(props) => props.theme.colors.bg};
       font-weight: 600;
+    }
+    & a:hover {
+      color: ${(props) => props.theme.colors.textColor};
+      transition: 0.3s;
+    }
+    & a.active {
+      color: ${(props) => props.theme.colors.textColor};
     }
   }
 `;
