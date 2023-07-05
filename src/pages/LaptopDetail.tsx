@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 import { Product } from "../Types/ProductType";
+import { DetailContainer } from "../shared/sharedStyles";
 
 export const LaptopDetail = () => {
   const { productId } = useParams();
@@ -8,16 +9,15 @@ export const LaptopDetail = () => {
   const product: Product | undefined = data as Product | undefined;
 
   return (
-    <div>
+    <DetailContainer>
       <Link to="/laptops">Regresar</Link>
       {product && (
         <div>
           <img src={product.images[0]} alt={product.title} />
           <h3>{product.title}</h3>
           <p>{product.description}</p>
-          <span>{product.price}</span>
         </div>
       )}
-    </div>
+    </DetailContainer>
   );
 };

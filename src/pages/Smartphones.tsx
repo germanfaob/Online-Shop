@@ -1,6 +1,7 @@
 import { CardPhone } from "../components/CardPhone";
 import { useFetch } from "../hooks/useFetch";
 import { Product } from "../Types/ProductType";
+import { Container } from "../shared/sharedStyles";
 
 export const Smartphones = () => {
   const { data } = useFetch(
@@ -9,7 +10,7 @@ export const Smartphones = () => {
   const { products }: { products?: Product[] } = data || {};
 
   return (
-    <section>
+    <Container>
       <div>
         <h1>Smartphones</h1>
       </div>
@@ -25,6 +26,6 @@ export const Smartphones = () => {
             />
           ))}
       </div>
-    </section>
+    </Container>
   );
 };
